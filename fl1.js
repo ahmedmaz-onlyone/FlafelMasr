@@ -1,6 +1,6 @@
 let cl_order=document.getElementsByClassName("order_section");
 let pls=document.getElementsByClassName("pls");
-let minus=document.getElementsByClassName("min"); // You fixed the name clash here, great job!
+let minus=document.getElementsByClassName("min");
 let quantity1=document.getElementById("quantity1");
 let quantity2=document.getElementById("quantity2");
 let quantity3=document.getElementById("quantity3");
@@ -196,17 +196,19 @@ aorder.addEventListener('click', function(){
 })
 
 let deliver= document.getElementById("delivry");
-let loc =document.getElementsByClassName("location")[0];
+let loc = document.getElementById("location");
+let locs = document.getElementsByClassName("location")[0];
 let here= document.getElementById("here");
 let take= document.getElementById("takeaway");
+
 deliver.addEventListener('change', function(){
-    loc.style.display = "flex";
+    locs.style.display = "flex";
 })
-here.addEventListener('click', function(){
-    loc.style.display = "none";
+here.addEventListener('change', function(){
+    locs.style.display = "none";
 })
-take.addEventListener('click', function(){
-    loc.style.display = "none";
+take.addEventListener('change', function(){
+    locs.style.display = "none";
 })
 
 let cancel = document.getElementsByClassName("cancel1")[0];
@@ -224,77 +226,83 @@ let sec=0;
 let addinfo = document.getElementsByClassName("addition")[0];
 let timer = document.getElementsByClassName("timer-value")[0];
 
-// FIX: Declare timerInterval here so the cancel button at the bottom can see it
+
 let timerInterval; 
 
 conferm.addEventListener('click', function(){
-    popwin.style.display = "none";
     
-    // FIX: Clear the old timer before starting a new one
-    clearInterval(timerInterval); 
-    
-    count++;
-    ordered.style.display = "flex";
-    shownh.innerText = "your order code is: " + count;
-    if (deliver.checked){
-        addinfo.innerText = "delivry titel: " + loc.value + "\n" + "order: " + order_summary.innerText; 
-        min=15;
-        // FIX: removed "let" so it uses the globally declared variable
-        timerInterval = setInterval(function(){
-            sec--;
-            if (sec<0 && min>0){
-                sec=59;
-                min--;
-            }
-            timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
-            if (min<=0 && sec<=0){
-                timer.innerText = "your order is done";
-                clearInterval(timerInterval);
-            }
-        
-        }, 1000);
-        
+    if (deliver.checked && loc.value == "" ){
+        alert('enter your location please');
     }
-    if (take.checked){
-        addinfo.innerText = "you will take a food away " + "\n" + "order: " + order_summary.innerText;
-        min=5;
-        // FIX: removed "let"
-        timerInterval = setInterval(function(){
-            sec--;
-            if (sec<0 && min>0){
-                sec=59;
-                min--;
-            }
-            timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
-            if (min<=0 && sec<=0){
-                timer.innerText = "your order is done";
-                clearInterval(timerInterval);
-            }
+    else{
+        popwin.style.display = "none";
         
-        }, 1000);
+        clearInterval(timerInterval); 
+        sec = 0;
+        
+        count++;
+        ordered.style.display = "flex";
+        shownh.innerText = "your order code is: " + count;
+        if (deliver.checked){
+            addinfo.innerText = "delivry titel: " + loc.value + "\n" + "order: " + order_summary.innerText; 
+            min=15;
+            timerInterval = setInterval(function(){
+                sec--;
+                if (sec<0 && min>0){
+                    sec=59;
+                    min--;
+                }
+                timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
+                if (min<=0 && sec<=0){
+                    timer.innerText = "your order is done";
+                    clearInterval(timerInterval);
+                }
+            
+            }, 1000);
+            
+        }
+        if (take.checked){
+            addinfo.innerText = "you will take a food away " + "\n" + "order: " + order_summary.innerText;
+            min=5;
+            
+            timerInterval = setInterval(function(){
+                sec--;
+                if (sec<0 && min>0){
+                    sec=59;
+                    min--;
+                }
+                timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
+                if (min<=0 && sec<=0){
+                    timer.innerText = "your order is done";
+                    clearInterval(timerInterval);
+                }
+            
+            }, 1000);
+            
+        }
+
+        if (here.checked){
+            addinfo.innerText = "you will have food here " + "\n" + "order: " + order_summary.innerText;
+            min=5;
+            timerInterval = setInterval(function(){
+                sec--;
+                if (sec<0 && min>0){
+                    sec=59;
+                    min--;
+                }
+                timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
+                if (min<=0 && sec<=0){
+                    timer.innerText = "your order is done";
+                    clearInterval(timerInterval);
+                }
+            
+            }, 1000);
+            
+        }
+        order_summary.innerText = "";
         
     }
 
-    if (here.checked){
-        addinfo.innerText = "you will have food here " + "\n" + "order: " + order_summary.innerText;
-        min=5;
-        timerInterval = setInterval(function(){
-            sec--;
-            if (sec<0 && min>0){
-                sec=59;
-                min--;
-            }
-            timer.innerText = "your order will be done in " + min + ":" + String(sec).padStart(2,'0');
-            if (min<=0 && sec<=0){
-                timer.innerText = "your order is done";
-                clearInterval(timerInterval);
-            }
-        
-        }, 1000);
-        
-    }
-    order_summary.innerText = "";
-    
 })
 
 let cancel2 = document.getElementsByClassName("cancel2")[0];
