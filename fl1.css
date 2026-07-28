@@ -23,6 +23,20 @@ ul li {
     position: relative;
     list-style: none;
 }
+@keyframes walkChicken {
+    0%   { transform: translateX(-200px); }
+    50%  { transform: translateX(100vw); }
+    51%  { transform: translateX(100vw) scaleX(-1); }
+    100% { transform: translateX(-200px) scaleX(-1); }
+}
+
+.chicken {
+    position: fixed;
+    top: 120px;
+    font-size: 50px;
+    z-index: 999;
+    animation: walkChicken 10s linear infinite;
+}
 
 ul li a::before {
     position: absolute;
@@ -107,10 +121,106 @@ body {
     color: #F5E6C8;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: black 0.1em 0.1em 0.2em;
+    
 }
- footer { border-top: 1px solid var(--border-color); padding: 4rem 0; text-align: center; margin-top: 2rem;  }
-        .contact-info { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
-        .contact-item { background: #F5E6C8; padding: 1rem 2rem; border-radius: 8px; font-family: 'Space Mono', monospace; border: 1px solid rgba(255,255,255,0.05); }
-        .contact-item a { color: var(--text-pink); text-decoration: none; font-size: 1.1rem; }
-        .contact-item a:hover { text-decoration: underline; }
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    
+}
+.pls, .min {
+    background-color: #5C8B3A;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.order-section {
+    background-color: #F5E6C8;
+    padding: 50px 0;
+    width: 100%;
+    height: 600px;
+}
+.morder{
+    background-color: #5C8B3A;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: cente;
+    height: 80px;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 15px 10px;
+
+}
+input{
+    border-radius: 10px;
+    border: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+#popout{
+    width: 400px;
+    height : 350px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: start;
+
+
+}
+
+
+
+
+
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #5C8B3A;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    margin: 1rem;
+    background: #F5E6C8;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item a {
+    color:#0a1001;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
