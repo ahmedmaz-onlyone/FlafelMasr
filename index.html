@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falafel</title>
     <link rel="stylesheet" href="fl1.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body >
     <header class="head">
         <nav class="navbar navbar-expand-lg h-100">
 
@@ -188,79 +188,296 @@
         </div>
 
     </section>
-    <section class="about-us" id="about">
-        <div style="height: 400px; margin: 30px 30px; background-color: #5c8b3a; border-radius: 20px; box-shadow: 10px 10px 5px 0px rgba(235, 146, 67, 0.2);;" class="our-journey">
-            <div class="container">
-                <div class="row" style="margin: 10px 10px;">
+    <section class="order_section">
+         <div class="d-flex justify-content-center m-5" > <h1 style="color: #5c8b3a; font-family: 'Courier New', Courier, monospace;">order now</h1></div>
+        <div class="container">
+            <div class="row ">
+                <div class="d-flex " style="height: 550px; width: 100%;">
+                    <div class="col-6 " style="align-items: center; padding: 30px 30px; height: 520px; border-radius: 15px; width: 50%; background-color: #f5e6c5; ">
                     
-                    <div style="color: #f5e6c5;padding-top: 20px;  align-items: center; " class="col-6">
-                        <h2>our journey</h2>
-                        <p>our project faces many challenges to be one of the most popular food resturant in egypt , we strated as a small local business in samll vechile and grew to become a well-known brand.
-                            
+                    
+                    
+                    <div class="order-item">   
+                        <label for="quantity1">sandwich flafely:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus1()">
+                            +
+                            </div>
+                            <input type="number" id="quantity1" value="0" min="0">
+                            <div class="btn min" onclick="minus1()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <label for="quantity2">sandawich egytpian beans:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus2()">
+                                +
+                            </div>
+                            <input type="number" id="quantity2" value="0" min="0">
+                            <div class="btn min" onclick="minus2()">
+                                -
+                            </div>
+                        </div>    
+                    </div>
+
+
+
+
+                    <div class="order-item">
+                        <label for="quantity3">sandawich alexandrian beans:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus3()">
+                                +
+                            </div>
+                            <input type="number" id="quantity3" value="0" min="0">
+                            <div class="btn min" onclick="minus3()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="order-item">
+                        <label for="quantity4">sandwich flafel with beans:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus4()">
+                                +
+                            </div>
+                            <input type="number" id="quantity4" value="0" min="0">
+                            <div class="btn min" onclick="minus4()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="order-item">
+                        <label for="quantity5">sandwich flafel with eggs:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus5()">
+                                +
+                            </div>
+                            <input type="number"  id="quantity5" value="0" min="0">
+                            <div class="btn min" onclick="minus5()">
+                                -
+                            </div>
+                        </div>     
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="order-item">
+                        <label for="quantity6">plate flafel masr:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus6()">
+                                +
+                            </div>
+                            <input type="number" id="quantity6" value="0" min="0">
+                            <div class="btn min" onclick="minus6()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="order-item">
+                        <label for="quantity7">plate el tekheen:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus7()">
+                                +
+                            </div>
+                            <input type="number" id="quantity7" value="0" min="0">
+                            <div class="btn min" onclick="minus7()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+                    <div class="order-item">
+                        <label for="quantity8">offer 1:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus8()">
+                                +
+                            </div>
+                            <input type="number" id="quantity8" value="0" min="0">
+                            <div class="btn min" onclick="minus8()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+                    <div class="order-item">
+                        <label for="quantity9">offer 2:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus9()">
+                                +
+                            </div>
+                            <input type="number" id="quantity9" value="0" min="0">
+                            <div class="btn min" onclick="minus9()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+                    <div class="order-item">
+                        <label for="quantity10">offer 3:</label>
+                        <div class="enter">
+                            <div class="btn pls" onclick="plus10()">
+                                +
+                            </div>
+                            <input type="number" id="quantity10" value="0" min="0">
+                            <div class="btn min" onclick="minus10()">
+                                -
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6" style="background-color: #5c8b3a;  padding: 30px 30px;border-radius: 15px; height: 520px; color: #f5e6c5;  margin-left:  10px ;">
+                    <h5 style="color: #f5e6c5; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">your order</h5>
+                    <div class="order-text" style="height: 400px;  margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        <p id="order-summary" style="color: #f5e6c5; height: 400px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
                         </p>
                     </div>
-                    <div class="col-6">
-                        <img style="height: 350px; border-radius: 15px; width: 100%; padding: 20px 20px;" src="journey.png.jpeg" alt="">
-                    </div>
-                </div>
                     
-            </div>
-            </div>
 
-
+                    
+                </div>
+                </div>
+                
+            </div>
         </div>
-        <div class="team">
-            <div class="container">
-                <div class="d-flex justify-content-center m-5" > <h1 style="color: #5c8b3a; font-family: 'Courier New', Courier, monospace;">Our Team</h1></div>
-                <div class="row">
-                    <div class="col-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                
-                                <div class="dt d-flex justify-content-center">
-                                    <h4>ahmed asker (ceo)</h4>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                
-                                <div class="dt d-flex justify-content-center">
-                                    <h4>mazen fathy</h4>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+       <div class="dorder" style="display: flex; justify-content: center;  width: 100%; height: 150px; padding: 20px 20px; ">
+        <button class=" morder" id="show">show order</button>
+        <button class=" morder" id="apply">apply order</button>
+       </div>
 
 
-                    <div class="col-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                
-                                <div class="dt d-flex justify-content-center">
-                                    <h4>adham wael</h4>
-                                    
-                                </div>
-                            </div>
+
+        
+    </section>
+    
+
+
+    <section class="popout" id="popout" style="border-radius: 15px; border: solid; display: none ; justify-content: center; align-items: center; background-color: #f5e6c5; height: 350px; width: 400px; padding: 20px 20px; position: fixed ; top: 50%; left: 50%; transform: translate(-50%, -50%);" >
+        <div class="choose" style="padding: 20px;">
+            <h6>choose what do you want</h6>
+            <div class="chosse-1" style="display: flex; justify-content: space-between; width: 100px;">
+            <label for="takeaway">takeaway</label>
+            <input type="radio" name="popout" id="takeaway">
+            </div>
+            <div class="choose-2" style="display: flex; justify-content: space-between; width: 100px;">
+                <label for="delivry">delivery</label>
+                <input type="radio" name="popout" id="delivry">
+                
+            </div>
+            <div class="choose-3" style="display: flex; justify-content: space-between; width: 100px;">
+                <label for="here">here</label>
+                <input type="radio" name="popout" id="here">
+                
+            </div>
+        </div>
+
+        <div class="location" style="display: none; padding: 20px;">
+            <label for="location">enter your location</label>
+            <input type="text" id="location" placeholder="your location">
+        </div>
+        <div class="buttons">
+            <div class="btn btn-binary " id="con" style="background-color: #5C8B3A; color: #fff;">
+            confrim your order
+            </div> 
+            <div class="btn btn-binary cancel1" style="background-color: #5C8B3A; color: #fff;">
+            cancel
+            </div> 
+        </div>
+       
+       
+
+    </section>
+
+
+
+
+    <section class="ordered234" style="display: none; width: 350px; height: 250px; background-color: #f5e6c5; border-radius: 15px; ; margin: auto; inset:0;" >
+        
+         <div class=" shown" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 40px 10px;" >
+            <div class="">
+                <h6 class="shownhd" style="color: #5c8b3a; font-family: 'Courier New', Courier, monospace;">
+                    
+                </h6>
+                <h6 class="shownh" style="font-family: 'Courier New', Courier, monospace;">
+                    your order is will done at :
+                </h6>
+                
+            </div>
+             
+             <div class="timer">
+                <p class="timer-value" style="font-size: 24px; ">
+                00:00
+                </p>
+             </div>
+             <div class="">
+                <p class="order-ended" >
+                    after the timer ended you will recive order 
+                </p>
+             </div>
+             <div class="btn btn-binary cancel2" style="background-color: #5C8B3A; color: #fff;">
+                cancel order 
+             </div>
+             <div class="addition">
+                delivry titel: 
+                order: 
+             </div>
+             
+        </div>
+      
+
+
+
+    </section>
+    <section class="about-us  " id="about">
+        <div class="d-flex justify-content-center m-5" > <h1 style="color: #5c8b3a; font-family: 'Courier New', Courier, monospace;">our journey</h1></div>
+        <div class="d-flex justify-content-center">
+            <div style="height: 350px; margin: 30px 30px; background-color: #5c8b3a; border-radius: 20px; box-shadow: 10px 10px 5px 0px rgba(235, 146, 67, 0.2); width: 80%;" class="our-journey">
+                <div class="container">
+                    <div class="row" style="margin: 10px 10px; display: flex; justify-content: space-between;">
+                        
+                        <div style="color: #f5e6c5;padding-top: 20px;  align-items: center; width: 450px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="col-6">
+                            <h2>Our Journey</h2>
+                            <p style="text-align: justify;">     Our project faces many challenges to be one of the most popular food restaurants in Egypt. We started as a small local business in a small vehicle and faced many challenges that could close the restaurant, but we coped with them and grew to become a well-known and one of the most successful restaurants in Egypt.
+                            </p>
+                        </div>
+                        <div class="col-6" >
+                            <img style=" height: 320px; border-radius:20px;  width: 100%; " src="journey.png.jpeg" alt="">
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                
-                                <div class="dt d-flex justify-content-center">
-                                    <h4>mazen salem</h4>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
                 </div>
             </div>
-
         </div>
 
     </section>
@@ -269,7 +486,7 @@
     <footer class="con" id="contact">
          
         <div class="container">
-            <h2 class="section-title" style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem; text-transform: uppercase; margin-bottom: 1rem;">Contact Us</h2>
+            <h2 class="section-title" style="text-align: center; font-size: 2.2rem; margin-bottom: 2rem; text-transform: uppercase; ">Contact Us</h2>
             <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">To learn more about the flafle masr project or to compalin about any proplem, please connect with our team representative, <strong>Ahmed Mostafa</strong>.</p>
             
             <div class="contact-info">
@@ -285,6 +502,7 @@
         </div>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="fl1.js"></script>
 </body>
 </html>
