@@ -236,6 +236,8 @@ conferm.addEventListener('click', function(){
     }
     else{
         popwin.style.display = "none";
+        loc.value='';
+
         
         clearInterval(timerInterval); 
         sec = 0;
